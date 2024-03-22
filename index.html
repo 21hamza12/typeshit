@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smash or Pass</title>
+<style>
+    body {
+        background-color: rgb(238, 231, 231);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 80%;
+        margin: 50px auto;
+    }
+    .friend {
+        width: 200px;
+        display: inline-block;
+        margin: 10px;
+        text-align: center;
+    }
+    .friend img {
+        width: 100%;
+        border-radius: 50%;
+    }
+    .vote-box {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .vote-box button {
+        padding: 10px 20px;
+        background-color: #0e0f0f;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+    .vote-box button:hover {
+        background-color: #0a0a0a;
+    }
+    .counter {
+        font-size: 18px;
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="friend">
+        <img src="c:\Users\Lenovo\Documents\WhatsApp Image 2024-03-22 at 22.35.53_a1362e90.jpg" alt="">
+        <div class="vote-box">
+            <button onclick="vote('smash', 'counter1', 'hamza_amrabd')">Smash</button>
+            <button onclick="vote('pass')">Pass</button>
+        </div>
+        <div class="counter" id="counter1">0</div>
+    </div>
+    <div class="container">
+        <div class="friend">
+            <img src="c:\Users\Lenovo\Documents\WhatsApp Image 2024-03-22 at 22.40.13_5bb2c405.jpg" alt="yacoub">
+            <div class="vote-box">
+                <button onclick="vote('smash', 'counter1', 'yacoub.offmst')">Smash</button>
+                <button onclick="vote('pass')">Pass</button>
+            </div>
+            <div class="counter" id="counter1">0</div>
+        </div>
+        <div class="container">
+            <div class="friend">
+                <img src="c:\Users\Lenovo\Documents\WhatsApp Image 2024-03-22 at 22.40.12_ecc3acd1.jpg" alt="mohamed">
+                <div class="vote-box">
+                    <button onclick="vote('smash', 'counter1', 'saads.closet')">Smash</button>
+                    <button onclick="vote('pass')">Pass</button>
+                </div>
+                <div class="counter" id="counter1">0</div>
+            </div>
+            <div class="container">
+                <div class="friend">
+                    <img src="c:\Users\Lenovo\Documents\WhatsApp Image 2024-03-22 at 22.40.12_c7944c2f.jpg" alt="mohamed lemin">
+                    <div class="vote-box">
+                        <button onclick="vote('smash', 'counter1', 'm-oumar1')">Smash</button>
+                        <button onclick="vote('pass')">Pass</button>
+                    </div>
+                    <div class="counter" id="counter1">0</div>
+                </div>
+                <div class="container">
+                    <div class="friend">
+                        <img src="c:\Users\Lenovo\Documents\WhatsApp Image 2024-03-22 at 22.55.35_43c24840.jpg" alt="welate">
+                        <div class="vote-box">
+                            <button onclick="vote('smash', 'counter1', 'c_welate')">Smash</button>
+                            <button onclick="vote('pass')">Pass</button>
+                        </div>
+                        <div class="counter" id="counter1">0</div>
+                    </div>
+                    <div class="container">
+                        <div class="friend">
+                            <img src="c:\Users\Lenovo\Documents\WhatsApp Image 2024-03-22 at 22.35.59_c2e2904b.jpg" alt="ghaythi">
+                            <div class="vote-box">
+                                <button onclick="vote('smash', 'counter1', 'ghaythi.bnh')">Smash</button>
+                                <button onclick="vote('pass')">Pass</button>
+                            </div>
+                            <div class="counter" id="counter1">0</div>
+                        
+
+    <!-- Repeat similar structure for other friends -->
+    <!-- Replace 'friendN_picture.jpg' with actual image paths -->
+    <!-- Replace 'friendN_phone_number' with actual phone numbers -->
+</div>
+
+<script>
+    function vote(voteType, counterId, phoneNumber) {
+        if (voteType === 'smash') {
+            var counter = document.getElementById(counterId);
+            var currentCount = parseInt(counter.textContent);
+            counter.textContent = currentCount ;
+            alert('You smashed le bg latnssay te6l3ilou 3le snap ' + counter.parentNode.querySelector('img').alt + '! snapchat: ' + phoneNumber);
+        } else if (voteType === 'pass') {
+            alert('You passed!');
+        }
+    }
+</script>
+
+</body>
+</html>
